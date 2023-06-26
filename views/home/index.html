@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@300;400;500;700&family=Lato&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/output.css">
+    <title>Home</title>
+</head>
+<body class=" h-screen">
+    <nav id="navbar" class="flex justify-center items-center w-full h-20 relative"></nav>
+
+    <!-- HOME -->
+    <section id="home" class=" max-w-7xl mx-auto p-6 flex flex-col gap-8 justify-center items-center lg:flex-row lg:justify-between">
+        <div class="hidden lg:flex justify-center items-center basis-2/4 lg:justify-start">
+            <img class="block max-h-96" src="/img/app.svg" alt="my app">
+        </div>
+        <div class="flex flex-col gap-8 basis-2/4 justify-start items-center">
+            <div>
+                <h1 class="capitalize text-4xl font-bold text-center text-indigo-700">ContactApp</h1>
+            </div>
+            <div class="flex justify-center items-center">
+                <p class="text-center text-lg text-neutral-900 lg:text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis odio dolorum cum, officiis ut at optio similique, voluptatibus sint quos nobis, enim nemo? Quae illo obcaecati qui, nostrum hic incidunt!</p>
+            </div>
+            <div class="flex gap-8 justify-center items-center">
+                <a class="font-bold capitalize text-xl text-indigo-700 lg:hover:opacity-75" href="/login/">Login</a>
+                <a class="font-bold capitalize text-xl text-neutral-100 px-6 py-4 bg-neutral-500 rounded lg:hover:opacity-75" href="/signup/">Sign Up</a>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/components/nav.js"></script>
+</body>
+</html>

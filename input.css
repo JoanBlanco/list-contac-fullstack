@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-link{
+    position: relative;
+    padding-bottom: 3px;
+
+}
+.nav-link:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    scale: 0;
+    height: 3px;
+    transform-origin: bottom right;
+    background-color: #4338ca;
+    border-radius: 10px;
+    transition: scale .5s ease-in-out;
+}
+.nav-link:hover::after{
+    scale: 1;
+    transform-origin: bottom left;
+}
+#home, #login, #signup{
+    height: calc(100vh - 5rem);
+}
+
+@media (min-width: 1024px){ 
+    #contacts{
+        height: calc(100vh - 5rem);
+    }
+}

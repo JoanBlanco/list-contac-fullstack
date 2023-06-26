@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@300;400;500;700&family=Lato&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Signup</title>
+</head>
+<body class=" h-screen relative">
+    <nav id="navbar" class="flex justify-center items-center w-full h-20 relative"></nav>
+
+
+    <!-- SIGNUP -->
+    <section id="signup" class=" max-w-7xl mx-auto p-6 flex flex-col gap-8 justify-center items-center lg:flex-row lg:justify-between">
+        <div class="hidden lg:flex lg:basis-2/4 lg:justify-center lg:items-center">
+            <img src="/img/signup.svg" alt="img-signup">
+        </div>
+        <div class="flex w-full lg:basis-2/4 justify-center items-center">
+            <!-- FORM -->
+            <form id="form" class="flex flex-col gap-4 max-h-[30rem] w-full md:w-3/4 bg-neutral-400 px-4 py-6 rounded overflow-y-scroll">
+                <h2 class="font-bold text-center text-4xl uppercase text-indigo-700">Sign Up</h2>
+                <!-- NOMBRE -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-lg font-bold" for="name-input">Nombre</label>
+                    <input id="name-input" name="name-input" class="px-2 py-4 w-full rounded text-lg" type="text" placeholder="Juan Perez" autocomplete="off" >
+                    <p class="text-[.8rem]">
+                        El nombre y apellido deben empezar con mayúscula.
+                    </p>
+                </div>
+                <!-- EMAIL -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-lg font-bold" for="email-input">Correo</label>
+                    <input id="email-input" name="email-input" class="px-2 py-4 w-full rounded text-lg" type="email" placeholder="correo@correo.com" autocomplete="off">
+                    <p class="text-[.8rem]">
+                        Debe ser un email válido.
+                    </p>
+                </div>
+                <!-- CONTRASEÑA -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-lg font-bold" for="password-input">Contraseña</label>
+                    <div class="relative z-auto view-container">
+                        <input id="password-input" name="password-input" class="px-2 py-4 w-full rounded text-lg z-0" type="password" placeholder="" autocomplete="off" >
+                        <!-- EYE -->
+                    <div id="" class="view-password absolute bottom-0 right-0 top-0 flex justify-center items-center pr-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>                          
+                    </div>
+                    </div>
+                    <p class="text-[.8rem]">
+                        Mínimp 8 caracteres. <br>
+                        Debe tener al menos un caracter númerico.
+                    </p>            
+                </div>
+                <!-- MATCH CONTRASEÑA -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-lg font-bold" for="match-input">Repetir Contraseña</label>
+                    <div class="relative z-auto view-container">
+                        <input id="match-input" name="match-input" class="px-2 py-4 w-full rounded text-lg z-0" type="password" placeholder="" autocomplete="off" >
+                        <!-- EYE -->
+                    <div id="" class="view-password absolute bottom-0 right-0 top-0 flex justify-center items-center pr-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>                          
+                    </div>
+                    </div>    
+                    <p class="text-[.8rem]">
+                        Debe coincidir con la contraseña
+                    </p>        
+                </div>
+                <button id="signup-btn" disabled class="bg-indigo-700 text-center text-neutral-100 rounded px-2 py-3 font-bold w-full disabled:cursor-not-allowed disabled:opacity-50  lg:hover:opacity-75" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="/components/nav.js"></script>
+    <script type="module" src="/components/password.js"></script>
+    <script type="module" src="/components/notification.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

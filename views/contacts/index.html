@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@300;400;500;700&family=Lato&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Contacts</title>
+</head>
+<body class=" h-screen">
+    <nav id="navbar" class="flex justify-center items-center w-full h-20 relative"></nav>
+    
+    <!-- CONTACTS -->
+    <section id="contacts" class="w-full p-6 flex flex-col lg:h-scree gap-8 justify-center items-center ">
+            <div id="contacts-container" class="w-5/6 max-w-7xl flex flex-col gap-4 max-h-full lg:flex-row lg:items-start">
+                <form id="form-contact" class="bg-neutral-400 px-4 py-6 rounded flex flex-col gap-4 lg:basis-2/4">
+                    <h2 class="text-center font-bold text-2xl capitalize text-indigo-700">Lista de contactos</h2>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-lg text-neutral-100 font-bold" for="name-input">Nombre:</label>
+                        <input  class="p-3 rounded text-lg" id="name-input" type="text" placeholder="Nombre del contacto" autocomplete="off">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-lg text-neutral-100 font-bold" for="number-input">Nro Telefónico</label>
+                        <div class="flex flex-col gap-2">
+                            <select class="p-3 rounded text-lg w-full" name="countryCode" id="select-input">
+                                <option data-countryCode="" value="" Selected disabled>Selecciona el código</option>
+                                    <option value="0212">0212</option>
+                                    <option value="0412">0412</option>
+                                    <option value="0416">0416</option>
+                                    <option value="0426">0426</option>
+                                    <option value="0414">0414</option>
+                                    <option value="0424">0424</option>
+                            </select>
+                            <input class="p-3 rounded text-lg" type="tel" id="number-input" placeholder="1234567" autocomplete="off">
+                        </div>
+                    </div>
+                    <button class="px-3 py-2 bg-indigo-700 font-bold text-neutral-100 rounded" id="btn-agregar">Agregar</button>
+                </form>
+                <!-- MIS CONTACTOS -->
+                <div class="w-full bg-neutral-400 px-4 py-6 rounded flex flex-col gap-4 max-h-[50rem] lg:basis-2/4 lg:max-h-[32rem]">
+                    <h2 class="text-center text-2xl font-bold text-indigo-700 w-full">Mis Contactos</h2>
+                    <ul id="contacts-list-container" class="flex flex-col gap-6 overflow-y-scroll">
+                        <!-- LISTA -->
+
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="/components/nav.js"></script>
+    <script type="module" src="/components/notification.js"></script>
+    <script type="module" src="/components/password.js"></script>
+</body>
+</html>
